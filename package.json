@@ -16,6 +16,9 @@
     "test": "jest && eslint index.js 'lib/**.js' 'test/**.js'",
     "lint": "eslint index.js 'lib/**.js' 'test/**.js' --fix"
   },
+  "bin": {
+    "trigger-repository-dispatch": "./index.js"
+  },
   "dependencies": {
     "@octokit/rest": "^16.28.7",
     "bunyan": "^1.8.12",
