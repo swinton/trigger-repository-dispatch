@@ -17,9 +17,11 @@
     "lint": "eslint index.js 'lib/**.js' 'test/**.js' --fix"
   },
   "dependencies": {
+    "@octokit/rest": "^16.28.7",
     "bunyan": "^1.8.12",
     "bunyan-format": "^0.2.1",
-    "dotenv": "^8.0.0"
+    "dotenv": "^8.0.0",
+    "minimist": "^1.2.0"
   },
   "devDependencies": {
     "eslint": "^5.13.0",
