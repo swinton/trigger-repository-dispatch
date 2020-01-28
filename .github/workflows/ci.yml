@@ -21,3 +21,8 @@ jobs:
     - name: Test
       run: |
         npm t
+    - name: Coverage
+      env:
+        CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+      run: |
+        bash <(curl -s https://codecov.io/bash)
