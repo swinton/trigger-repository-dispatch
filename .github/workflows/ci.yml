@@ -13,16 +13,22 @@ jobs:
         GITHUB_CONTEXT: ${{ toJson(github) }}
       run: |
         echo "$GITHUB_CONTEXT"
+    
     - name: Checkout
       uses: actions/checkout@v1.0.0
+    
     - name: Install
       run: |
         npm ci
+
     - name: Test
       run: |
         npm t
-    - name: Coverage
-      env:
-        CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
-      run: |
-        bash <(curl -s https://codecov.io/bash)
+        
+    - name: Codecov
+      uses: codecov/codecov-action@v1.0.5
+      with:
+        # User defined upload name. Visible in Codecov UI
+        name: trigger-repository-dispatch # optional
+        # Repository upload token - get it from codecov.io
+        token: ${{ secrets.CODECOV_TOKEN }}
