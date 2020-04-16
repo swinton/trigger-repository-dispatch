@@ -1,6 +1,6 @@
 {
   "name": "trigger-repository-dispatch",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "",
   "author": "Steve Winton <stevewinton@gmail.com> (https://github.com/swinton)",
   "main": "index.js",
@@ -8,7 +8,7 @@
   "keywords": [],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/swinton/javascript.git"
+    "url": "git+https://github.com/swinton/trigger-repository-dispatch.git"
   },
   "scripts": {
     "start": "node ./index.js",
@@ -23,8 +23,7 @@
     "@octokit/rest": "^16.28.7",
     "bunyan": "^1.8.12",
     "bunyan-format": "^0.2.1",
-    "dotenv": "^8.0.0",
-    "minimist": "^1.2.0"
+    "minimist": "^1.2.5"
   },
   "devDependencies": {
     "eslint": "^5.13.0",
@@ -34,8 +33,7 @@
     "eslint-plugin-jsx-a11y": "^6.2.1",
     "eslint-plugin-prettier": "^2.7.0",
     "eslint-plugin-react": "^7.12.4",
-    "jest": "^24.8.0",
-    "nodemon": "^1.18.4",
+    "jest": "^25.3.0",
     "prettier": "^1.16.4"
   },
   "engines": {
@@ -55,12 +53,5 @@
         "statements": 80
       }
     }
-  },
-  "nodemonConfig": {
-    "exec": "npm start",
-    "watch": [
-      ".env",
-      "."
-    ]
   }
 }
